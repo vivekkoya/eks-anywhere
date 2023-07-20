@@ -144,7 +144,7 @@ kind: CloudStackMachineConfig
 metadata:
   name: my-cluster-name-etcd
 spec:
-  computeOffering: {}
+  computeOffering: 
     name: "m4-large"
   users:
   - name: "capc"
@@ -301,16 +301,16 @@ CloudStack domain to deploy the cluster. The default is `ROOT`.
 ### availabilityZones.managementApiEndpoint (required)
 Location of the CloudStack API management endpoint. For example, `http://10.11.0.2:8080/client/api`.
 
-### availabilityZones.{id,name} (required)
+### availabilityZones.{id or name} (required)
 Name or ID of the CloudStack zone on which to deploy the cluster.
 
-### availabilityZones.zone.network.{id,name} (required)
+### availabilityZones.zone.network.{id or name} (required)
 CloudStack network name or ID to use with the cluster.
 
 ## CloudStackMachineConfig
 In the example above, there are separate `CloudStackMachineConfig` sections for the control plane (`my-cluster-name-cp`), worker (`my-cluster-name`) and etcd (`my-cluster-name-etcd`) nodes.
 
-### computeOffering.{id,name} (required)
+### computeOffering.{id or name} (required)
 Name or ID of the CloudStack compute instance.
 
 ### users[0].name (optional)
