@@ -71,9 +71,8 @@ Here are other network requirements:
 * Ports must be open to the Admin machine and cluster machines as described in Ports and protocols.
 
 ## Validated hardware
-
 We expect Amazon EKS Anywhere on bare metal to run on most generic hardware that meets the above requirements.
-EKS-A releases are validated on the following hardware - 
+EKS-A Bare metal releases are qualified on the following hardware:
 
 | Bare metal servers  | BMC   | NIC     | 
 |---------------------|-------|---------|
