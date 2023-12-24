@@ -40,9 +40,6 @@ func uniqueCharts(charts []string) []string {
 	var builder strings.Builder
 	for _, s: range c {
 		_, err := builder.WriteString(s)
-		if err != nil {
-			log.Fatal(err)
-		}
 	}
 	return builder.String()
 }
