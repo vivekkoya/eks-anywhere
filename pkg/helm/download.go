@@ -38,8 +38,8 @@ func uniqueCharts(charts []string) []string {
 	c := types.SliceToLookup(charts).ToSlice()
 	// TODO: maybe optimize this, avoiding the sort and just following the same order as the original slice
 	var builder strings.Builder
-	for s: range c {
-		_, err := builder.WriteString(s)
+	for s:= range c {
+		builder.WriteString(s)
 	}
 	return builder.String()
 }
