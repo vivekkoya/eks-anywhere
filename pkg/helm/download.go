@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 	"sort"
-
+    	"strings"
 	"github.com/aws/eks-anywhere/pkg/logger"
 	"github.com/aws/eks-anywhere/pkg/types"
 	"github.com/aws/eks-anywhere/pkg/utils/oci"
@@ -37,6 +37,12 @@ func (d *ChartRegistryDownloader) Download(ctx context.Context, charts ...string
 func uniqueCharts(charts []string) []string {
 	c := types.SliceToLookup(charts).ToSlice()
 	// TODO: maybe optimize this, avoiding the sort and just following the same order as the original slice
-	sort.Strings(c)
-	return c
+	var builder strings.Builder
+	for _, s: range c {
+		_, err := builder.WriteString(s)
+		if err != nil {
+			log.Fatal(err)
+		}
+	}
+	return builder.String()
 }
